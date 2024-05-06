@@ -1,11 +1,12 @@
 package com.flink.lfxu;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.configuration.RestOptions;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.EnvironmentSettings;
 import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
-
+@Slf4j
 public class WindowAgg {
   public static final String CREATE_HANDLER_TIMESTRAMP_UDF_SQL = "create function if not exists latency as 'com.flink.lfxu.function.DelayFunction'";
 
